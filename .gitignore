@@ -1,0 +1,60 @@
+# Rust-specific ignores
+target/
+Cargo.lock
+Cargo.toml.orig
+cargo.lock.orig
+Cargo.toml.bk
+cargo.lock.bk
+
+# IDE and editor ignores
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Build output ignores
+dist/
+build/
+out/
+
+# Environment-specific ignores
+.env
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env*.local
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# Other project-specific ignores
+*.log
+*.swp
+.DS_Store
