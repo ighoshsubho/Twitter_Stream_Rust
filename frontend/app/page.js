@@ -19,23 +19,26 @@ export default function Home() {
   };
 
   // Listen for incoming tweets
-  socket.onmessage = (event) => {
-    const tweet = JSON.parse(event.data);
-    setTweets((prevTweets) => [...prevTweets, tweet]);
-  };
+  if (socket) {
+    socket.onmessage = (event) => {
+      const tweet = JSON.parse(event.data);
+      setTweets((prevTweets) => [...prevTweets, tweet]);
+    };
+  }
 
   return (
     <div className="container mx-auto">
       <h1 className="text-2xl font-bold my-4">Twitter Streaming Example</h1>
 
       <form onSubmit={handleKeywordSubmit}>
-        <input
-          type="text"
+        <input 
+          type="text" 
+          id="first_name" 
+          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
           placeholder="Enter keyword"
-          value={keyword}
           onChange={handleKeywordChange}
-          className="border border-gray-300 rounded py-2 px-4 mr-2"
-        />
+          value={keyword}
+          />
         <button
           type="submit"
           className="bg-blue-500 text-white py-2 px-4 rounded"

@@ -11,6 +11,6 @@ actix-rt = "2.3.0"
 futures = "0.3.17"
 tokio = { version = "1", features = ["full"] }
 tokio-tungstenite = "0.15.0"
-twitter-stream = "0.3.2"
+twitter-stream = "0.13.0"
 dotenv = "0.15.0"
 
